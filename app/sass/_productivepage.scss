@@ -1,0 +1,121 @@
+.productive{
+    text-align: center;
+    &-intro{
+        @include sml{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 100px;
+            margin-bottom: 140px;
+        }
+        > img{
+            width: 50%;
+            margin: 40px 0;
+            @include sml{
+                margin: 40px 30px 40px 0;
+            }
+        }
+        &-description{
+            padding: 10px 25px;
+            text-align: left;
+            @include sml{
+                padding: 10px 37px 10px 25px;
+            }
+            > h1{
+                font-size: 19px;
+                margin-bottom: 15px;
+                @include sml{
+                    font-size: 40px;
+                    margin-top: 20px;
+                    margin-bottom: 25px;
+                }
+            }
+
+            > p{
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+
+            .see-more{
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                border-bottom: 1.5px solid $Cyancall;
+                padding-bottom: 5px;
+                > a{
+                    text-decoration: none;
+                    color: $Cyancall;
+                }
+
+                > img{
+                    width: 20px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    &-comments{
+        position: relative;
+        padding: 150px 47px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 25vw;
+        gap: 30px 0;
+        @include sml{
+            grid-template-columns: repeat(3,1fr);
+            padding: 0 140px;
+            gap: 0 3vw;
+        }
+
+        > img{
+            width: 20px;
+            margin-left: 5px;
+            @include sml{
+                position: absolute;
+                z-index: -1;
+                width: 70px;
+                top: -8%;
+                left: 8.5%;
+            }
+        }
+
+        .comment{
+            background-color: $DarkBluetestimonials;
+            border-radius: 5px;
+            text-align: left;
+            padding: 25px 20px;
+            > p{
+                font-size: 11px;
+                line-height: 1.5;
+                margin-bottom: 25px;
+                @include sml{
+                    font-size: 15px;
+                }
+            }
+
+            .profile{
+                display: flex;
+                align-items: center;
+                > img{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                }
+
+                &-info{
+                    margin-left: 10px;
+                    > h3{
+                        font-size: 11px;
+                        margin-bottom: 5px;
+                    }
+                    > h4{
+                        font-size: 10px;
+                        font-size: 400;
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+    }
+}
